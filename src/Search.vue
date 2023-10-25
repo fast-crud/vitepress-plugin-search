@@ -4,6 +4,11 @@ import { useData, withBase } from "vitepress";
 // @ts-ignore
 import Index from "./module/index.js";
 
+// @ts-ignore
+import { Segment, useDefault } from 'segmentit';
+
+const segmentit = useDefault(new Segment());
+
 //TODO: delete deprecate code
 const VPData = useData();
 
@@ -30,7 +35,10 @@ interface Options {
 
 const result = computed(() => {
   if (searchTerm.value) {
-    var searchResults = searchIndex.value.search(searchTerm.value, { enrich: true })
+    const str = searchTerm.value
+    const words = segmentit.doSegment(str,{simple:true});
+    const value =  words.join(" ")
+    const searchResults = searchIndex.value.search(value, { enrich: true })
 
     var search = [] as any[];
 

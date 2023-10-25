@@ -13,11 +13,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "segmentit": "^2.0.3",
     "vitepress": "1.0.0-alpha.13",
     "vue": "^3.2.37"
   },
   "dependencies": {
-    "vite": "4",
-    "vitepress-plugin-search": "link:.."
+    "@fast-crud/vitepress-plugin-search": "link:..",
+    "vite": "4"
   }
 }

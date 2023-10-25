@@ -34,7 +34,7 @@ module.exports = defineConfig({
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
-      external: ["vue", "vite", "markdown-it", "fs/promises", "flexsearch"],
+      external: ["vue", "vite", "markdown-it", "fs/promises", "flexsearch","segmentit"],
       output: {
         // Provide global variables to use in the UMD build
         // for externalized deps

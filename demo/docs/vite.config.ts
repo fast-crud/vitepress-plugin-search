@@ -1,5 +1,7 @@
-import { SearchPlugin } from "vitepress-plugin-search";
+import { SearchPlugin } from "@fast-crud/vitepress-plugin-search";
 import { defineConfig } from "vite";
+import path from "path";
+import commonjs from "@rollup/plugin-commonjs";
 
 export default defineConfig({
   plugins: [
